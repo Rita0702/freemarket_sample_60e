@@ -1,3 +1,4 @@
+test
 # freemarket_sample_60e DB設計
 ## users
 |Column|Type|Options|
