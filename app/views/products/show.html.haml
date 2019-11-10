@@ -123,29 +123,29 @@
     -#     = link_to '#' do
     -#       %i.fas.fa-lock
     -#       %span あんしん・あんぜんへの取り組み
-    -if user_signed_in? 
-      .item-detail-message
+  -if user_signed_in? 
+    .item-detail-message
 
-        .message-container
-          %ul.message-items
-            -@comment.each do |comment|
-              %li.clearfixs
-                %div
-                  .profile-image
-                    - if comment.user.avator.blank?
-                      = image_tag "//static.mercdn.net/images/member_photo_noimage_thumb.png", class: 'user-icon'
-                    - else 
-                      = image_tag "#{comment.user.avator}", class: 'user-icon'  
-                  %figcaption.bold
-                    = comment.user.nickname + "さん"
-                .message-body
-                  .message-body-text 
-                    = comment.comment
-        .message-content
-          = form_for [@message], url: product_comments_path(@product.id) do |f|
-            %form.message-form
-              = f.text_area :comment, class: "textarea-default", type: "text"
-              = f.submit  class: "btn-default", value: "コメントする"
+      .message-container
+        %ul.message-items
+          -@comment.each do |comment|
+            %li.clearfixs
+              %div
+                .profile-image
+                  - if comment.user.avator.blank?
+                    = image_tag "//static.mercdn.net/images/member_photo_noimage_thumb.png", class: 'user-icon'
+                  - else 
+                    = image_tag "#{comment.user.avator}", class: 'user-icon'  
+                %figcaption.bold
+                  = comment.user.nickname + "さん"
+              .message-body
+                .message-body-text 
+                  = comment.comment
+      .message-content
+        = form_for [@message], url: product_comments_path(@product.id) do |f|
+          %form.message-form
+            = f.text_area :comment, class: "textarea-default", type: "text"
+            = f.submit  class: "btn-default", value: "コメントする"
  
   .items-in-user-profile
     %section.items-box-container.clearfix.related-item-column.items-in-user-profile
