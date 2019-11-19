@@ -1,3 +1,33 @@
+## アプリケーション
+
+freemarket_sample_60e 
+
+## URL
+
+http://3.114.71.144/
+
+## 概要
+
+某フリマアプリのクローンサイト
+
+## 機能一覧
+
+- ユーザーの新規会員登録、ログイン機能、SNS認証機能
+- 商品の出品、出品した商品の編集機能
+- 商品の購入機能、pay.jpを用いたクレジット決済機能
+- 商品検索機能
+- カテゴリー機能
+- マイページ機能、登録内容の編集機能
+
+## 技術一覧
+
+- ruby 2.5.1p57 (2018-03-29 revision 63029)
+- Rails 5.2.3
+- haml/scss/javascript/jquery
+- AWS/Unicorn/Ngix/Mysql/Capistrano
+- GitHubs/slack/trello
+
+
 # freemarket_sample_60e DB設計
 ## users
 |Column|Type|Options|
